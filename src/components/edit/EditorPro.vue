@@ -181,7 +181,7 @@ const submitTitleEdit = () => {
     if (isAdd.value) {
       addArticle(editInfo.value).then(r => {
         id.value = r.data.data;
-        // editInfo.value.id =r.data.data;
+        editInfo.value.id =r.data.data;
       })
     }
     console.log(editInfo.value)
