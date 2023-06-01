@@ -118,9 +118,9 @@
               <router-view></router-view>
             </transition>
 
-            <el-footer height="60px" hidden style="background-color:rgba(29, 38, 49,0.5);margin: 0 10px 0 ">
+            <el-footer height="30px" hidden style="background-color:rgba(29, 38, 49,0.5);margin: 10px 10px 0 ;">
               <div style="height: 100%;display: flex;text-align: center;justify-content: center;align-items: center;">
-                <span>Footer</span>
+                <span @click="ck" style="color: white;"> 蜀ICP备2023013238号-1</span>
               </div>
             </el-footer>
           </q-scroll-area>
@@ -180,7 +180,6 @@
 
         </q-card>
       </div>
-
     </q-dialog>
   </div>
 </template>
@@ -199,6 +198,10 @@ import {QScrollArea} from "quasar";
 import {NInput, NSpace} from "naive-ui";
 import LocalStorage from '../utils/cache'
 import {Auth, GetAuth} from '../api/article/auth'
+
+const ck = () => {
+    window.open('https://beian.miit.gov.cn/',"_self")
+}
 
 
 const drawer = ref(false);
