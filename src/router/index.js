@@ -49,16 +49,17 @@ const router = createRouter({
     ],
 })
 
-router.beforeEach(async (to, from, next) => {
-    let data = await Auth(Storage.local.get("ATTACK"));
-    if (to.name === 'editor') {
-        if (data.data.data) {
-            next()
-        } else {
-            next({name: 'start'})
-        }
-    } else {
-        next();
-    }
-})
+// CDN 验证
+// router.beforeEach(async (to, from, next) => {
+//     let data = await Auth(Storage.local.get("ATTACK"));
+//     if (to.name === 'editor') {
+//         if (data.data.data) {
+//             next()
+//         } else {
+//             next({name: 'start'})
+//         }
+//     } else {
+//         next();
+//     }
+// })
 export default router;
