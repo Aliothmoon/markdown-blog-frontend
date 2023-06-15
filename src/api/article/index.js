@@ -1,4 +1,4 @@
-import service from "../../request/index.js";
+import service from "@/utils/request/index.js";
 
 
 export function getSearchResult(keyword, pageSize) {

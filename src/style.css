@@ -37,16 +37,12 @@ html > ::-webkit-scrollbar-thumb:vertical:active {
 }
 
 
-@font-face {
-    font-family: "HarmonyOS_Sans_Black";
-    src: url('../public/font/HarmonyOS_Sans/HarmonyOS_Sans_Black.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: "HarmonyOS_Sans_Medium";
-    src: url('../public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
+    src: url('public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
+    /*src: url('public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');*/
     font-weight: normal;
     font-style: normal;
 }
@@ -59,7 +55,8 @@ html > ::-webkit-scrollbar-thumb:vertical:active {
 /*}*/
 @font-face {
     font-family: "喜鹊聚珍体";
-    src: url('../public/font/喜鹊聚珍体.ttf');
+    /*src: url('public/font/喜鹊聚珍体.ttf');*/
+    src: url('https://dm.nbut.ac.cn/xcoder/%E5%96%9C%E9%B9%8A%E8%81%9A%E7%8F%8D%E4%BD%93.ttf');
     font-weight: normal;
     font-style: normal;
 }

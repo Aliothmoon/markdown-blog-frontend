@@ -40,8 +40,6 @@ import {pinia} from './pinia/index'
 import {config} from "md-editor-v3";
 
 
-import {lineNumbers} from '@codemirror/view';
-import ZH_TW from '@vavt/md-editor-extension/dist/locale/zh-TW';
 
 
 import iconSet from 'quasar/icon-set/fontawesome-v6'

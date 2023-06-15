@@ -1,34 +1,34 @@
-import ArticleList from "../components/ArticleList.vue";
-import Home from "../components/Home.vue";
+import ArticleList from "@/views/Main/ArticleList/index.vue";
 
-import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
-import EditorPro from "../components/edit/EditorPro.vue";
-import Preview from "../components/preview/Preview.vue";
-import {Auth} from '../api/article/auth'
-import Storage from '../utils/cache'
+import {createRouter, createWebHashHistory} from "vue-router";
+
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
-            path: '/edit',
+            path: '/mag',
+            component: () => import('@/views/Manage/index.vue')
+        },
+        {
+            path: '/editor',
             name: 'editor',
-            component: EditorPro
+            component: () => import('@/views/Editor/index.vue')
         },
         {
             path: '/preview',
             name: 'preview',
-            component: Preview
+            component: () => import('@/views/Preview/index.vue')
         },
         {
             path: '/start',
             name: 'start',
             alias: '/',
-            component: Home
+            component: () => import('@/views/Home/index.vue')
         },
         {
             path: '/home',
-            component: () => import('../components/Main.vue'),
+            component: () => import('@/views/Main/index.vue'),
             children: [
                 {
                     name: 'alist',
@@ -38,13 +38,13 @@ const router = createRouter({
                 {
                     name: 'content',
                     path: 'ct',
-                    component: () => import('../components/ArticleContent.vue'),
+                    component: () => import('@/views/Main/ArticleContent/index.vue'),
                 },
             ]
         },
         {
             path: '/:error*',
-            component: () => import('../components/NotFound.vue')
+            component: () => import('@/views/NotFound/index.vue')
         }
     ],
 })
