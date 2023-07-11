@@ -9,13 +9,13 @@
         />
       </template>
       <template #extra>
-        <q-btn flat type="secondary" @click="$router.push('/')" color="purple" >Back</q-btn>
+        <n-button flat type="secondary" @click="this.$router.push('/')" color="purple">Back</n-button>
       </template>
     </el-result>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "NotFound"
 }

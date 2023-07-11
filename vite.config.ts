@@ -1,18 +1,24 @@
 import {defineConfig} from 'vite'
-import path from 'path'
 import vue from '@vitejs/plugin-vue'
-import {quasar, transformAssetUrls} from '@quasar/vite-plugin'
+import path from "path"
 import {visualizer} from "rollup-plugin-visualizer";
-// https://vitejs.dev/config/
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
     plugins: [
-        vue({
-            template: {transformAssetUrls}
-        }),
-        quasar(),
+        vue(),
         visualizer({open: true})
     ],
+    envDir: 'env',
+    worker: {
+        format: 'es'
+    },
+    css: {
+        postcss: {
+            plugins: [tailwindcss, autoprefixer]
+        }
+    },
     resolve: {
         alias: [{
             find: '@',
@@ -28,6 +34,11 @@ export default defineConfig({
                 target: 'http://localhost:9993/',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, '')
+            },
+            '/image': {
+                target: 'https://www.dmoe.cc/random.php',
+                changeOrigin: true,
+                followRedirects: false
             }
         }
     }

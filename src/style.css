@@ -1,12 +1,16 @@
-:root {
-    background-color: #CFD3DC;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+
+:root {
+    /*background-color: #CFD3DC;*/
+}
 
 html {
     /* 浏览器滚动条 */
 }
-
 
 html > ::-webkit-scrollbar {
     width: 5px;
@@ -37,22 +41,14 @@ html > ::-webkit-scrollbar-thumb:vertical:active {
 }
 
 
-
-
 @font-face {
     font-family: "HarmonyOS_Sans_Medium";
-    src: url('public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
+    src: url('../public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
     /*src: url('public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');*/
     font-weight: normal;
     font-style: normal;
 }
 
-/*@font-face {*/
-/*    font-family: "喜鹊招牌体";*/
-/*    src: url('../public/font/喜鹊招牌体(简 繁体).ttf');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*}*/
 @font-face {
     font-family: "喜鹊聚珍体";
     /*src: url('public/font/喜鹊聚珍体.ttf');*/

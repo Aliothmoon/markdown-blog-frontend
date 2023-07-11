@@ -64,14 +64,12 @@ const localCache = {
         localStorage.removeItem(key);
     }
 }
-
+export const useSession = () => sessionCache
+export const useLocal = () => localStorage
 export default {
-    /**
-     * 会话级缓存
-     */
+
     session: sessionCache,
-    /**
-     * 本地缓存
-     */
-    local: localCache
+
+    local: localCache,
+
 }

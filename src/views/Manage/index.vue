@@ -1,19 +1,19 @@
 <template>
     <div class="mag-box">
         <div>
-            <q-banner class="text-white" style="text-align: center;" :class="color">
+            <div class="text-white" style="text-align: center;" :class="color">
                 {{ text }}
-            </q-banner>
+            </div>
             <div style="display:flex;justify-content:center;margin: 30px">
-                <q-btn color="white" text-color="black" label="EXEC" @click="toggle" :loading="loading"/>
+                <n-button color="white" text-color="black" label="EXEC" @click="toggle" :loading="loading"/>
             </div>
         </div>
     </div>
 </template>
 <script setup>
 import {onMounted, ref} from "vue";
-import service from "@/utils/request/index.js";
-import {NONE, PENDING, FAIL, SUCCESS} from '@/views/Manage/status.js'
+import service from "@/utils/request/index.ts";
+import {NONE, PENDING, FAIL, SUCCESS} from '@/views/Manage/status.ts'
 
 const loading = ref(false);
 const color = ref('bg-secondary');

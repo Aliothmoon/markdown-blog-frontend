@@ -1,5 +1,4 @@
-import service from '@/utils/request/index.js';
-
+import service from '@/utils/request/index.ts';
 export function GetAuth(Signature) {
     let params = new URLSearchParams()
     params.set('signature', Signature);

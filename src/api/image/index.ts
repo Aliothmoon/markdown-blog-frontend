@@ -1,4 +1,4 @@
-import service from "@/utils/request/index.js";
+import service from "@/utils/request";
 
 export function uploadImage(file) {
     let data = new FormData();
