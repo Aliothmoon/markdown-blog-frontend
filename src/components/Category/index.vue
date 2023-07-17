@@ -1,21 +1,33 @@
 <script lang="ts">
-import {defineComponent} from 'vue'
+import {defineComponent, ref} from 'vue'
 import {NButton, NIcon, NList, NListItem, NSpace, NThing} from "naive-ui";
 
 export default defineComponent({
   name: "RCategory",
   components: {NSpace, NThing, NListItem, NList, NButton, NIcon},
   setup() {
+    const cag = ref([])
+    for (let i = 0; i < 7; i++) {
+      fetch('https://api.xygeng.cn/one').then(r => r.json()).then((r) => {
+        return r.data;
+      }).then((r) => {
+        // console.log(r)
+        cag.value.push(r.origin.substring(0,10))
+      })
+    }
 
+    return {
+      cag
+    }
   }
 })
 </script>
 
 <template>
   <div>
-    <div class="text-center flex">
+    <div class="text-center flex" >
       <div class="ml-3 mb-2 mt-2 flex items-center">
-        <n-icon>
+        <n-icon size="15">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
             <path d="M15 6l-1.41 1.41L17.17 11l-3.58 3.59L15 16l5-5l-5-5z" fill="currentColor"></path>
             <path
@@ -23,9 +35,9 @@ export default defineComponent({
                 fill="currentColor"></path>
           </svg>
         </n-icon>
-        <p class="ml-3">Title</p>
+        <p class="ml-3 font-bold">分类</p>
       </div>
-      <div class="absolute mt-2  btn-box">
+      <div class="absolute mt-2 mr-4 btn-box">
         <n-button quaternary secondary size="small">
           <template #icon>
             <n-icon>
@@ -48,12 +60,12 @@ export default defineComponent({
         </n-button>
       </div>
     </div>
-    <n-list hoverable clickable>
+    <n-list hoverable clickable >
       <n-list-item v-for="i in 6">
         <template #default>
           <n-thing content-style="margin-top: 10px;">
             <template #description>
-              <p>Hello</p>
+              <p>{{ cag[i] }}</p>
             </template>
           </n-thing>
         </template>
@@ -69,7 +81,7 @@ export default defineComponent({
                 </g>
               </svg>
             </n-icon>
-            <p class="ml-2">121</p>
+            <p class="ml-2">{{ i }}</p>
           </div>
 
         </template>
@@ -83,5 +95,9 @@ export default defineComponent({
 .btn-box {
   right: 20px;
   transform: translateY(-10%)
+}
+p {
+  font-weight: bold;
+  font-family: TiZhong, serif;
 }
 </style>

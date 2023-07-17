@@ -1,0 +1,23 @@
+@import "@/style.css";
+@import "@/font/font";
+
+//@font-set: 喜鹊聚珍体;
+@font-set: @global-var-font;
+@font-tmp: @global-var-font-tmp;
+@f-size: 15px;
+@f-color: #fffdfd;
+
+.font-set {
+  //font-weight: bold;
+  font-family: @font-set, "Microsoft Himalaya";
+  font-size: @f-size;
+  color: @f-color;
+}
+
+p {
+  //font-weight: bold;
+  font-family: @font-set, @font-tmp;
+  font-size: @f-size;
+  color: @f-color;
+}
+

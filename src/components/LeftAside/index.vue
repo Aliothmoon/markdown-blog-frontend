@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import LeftAsideItem from "@/components/LeftAsideItem/index.vue";
+import LeftAsideItem from "@/components/LeftAside/LeftAsideItem/index.vue";
 import {defineComponent} from "vue";
 
 export default defineComponent({
@@ -86,9 +86,12 @@ export default defineComponent({
   </LeftAsideItem>
 </template>
 
-<style scoped>
+<style scoped lang="less">
 p {
+  font-size: 17px;
+
   font-family: 喜鹊聚珍体, serif;
+  //font-family: HarmonyOS_Sans_Medium, serif;
 }
 
 .off-box {

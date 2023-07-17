@@ -44,7 +44,7 @@ export default defineComponent({
     });
     setInterval(() => {
       update(status, nightStyle)
-    }, 500)
+    }, 700)
     return {
       status,
       nightStyle

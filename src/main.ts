@@ -1,13 +1,9 @@
 import {createApp} from 'vue'
-import './style.css'
-import App from './App.vue'
-
-// El-Plus
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
+import '@/style.css'
+import App from '@/App.vue'
 
 // router
-import router from './router/index'
+import router from '@/router/index.ts'
 
 // Create  App
 const app = createApp(App)
@@ -16,14 +12,11 @@ const app = createApp(App)
 import 'animate.css';
 
 // Pinia
-import {pinia} from '@/pinia'
+import {pinia} from '@/store'
 import {config} from "md-editor-v3";
-
-
 
 
 app.use(pinia)
     .use(router)
-    .use(ElementPlus)
 
 app.mount('#app')

@@ -42,12 +42,22 @@ html > ::-webkit-scrollbar-thumb:vertical:active {
 
 
 @font-face {
+    font-family: "TiZhong";
+    /*src: url('public/font/喜鹊聚珍体.ttf');*/
+    src: url('assets/font/Ti-Zhong.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "HarmonyOS_Sans_Medium";
-    src: url('../public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
+    src: url('assets/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf') format('ttf');
     /*src: url('public/font/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');*/
     font-weight: normal;
     font-style: normal;
 }
+
+
 
 @font-face {
     font-family: "喜鹊聚珍体";

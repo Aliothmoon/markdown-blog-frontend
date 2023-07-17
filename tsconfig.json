@@ -23,10 +23,10 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "public/*": ["public/*"]
+      "public/*": ["public/*"],
+      "assets/*": ["assets/*"],
     },
-    "allowSyntheticDefaultImports": true,
-    "types": ["element-plus/global"]
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

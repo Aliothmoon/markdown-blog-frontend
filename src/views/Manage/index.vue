@@ -10,7 +10,7 @@
         </div>
     </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import {onMounted, ref} from "vue";
 import service from "@/utils/request/index.ts";
 import {NONE, PENDING, FAIL, SUCCESS} from '@/views/Manage/status.ts'

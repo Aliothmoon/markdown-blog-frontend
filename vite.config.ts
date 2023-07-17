@@ -10,6 +10,7 @@ export default defineConfig({
         vue(),
         visualizer({open: true})
     ],
+    assetsInclude:['**/*.md'],
     envDir: 'env',
     worker: {
         format: 'es'
@@ -26,6 +27,9 @@ export default defineConfig({
         }, {
             find: 'public',
             replacement: path.resolve(__dirname, './public')
+        },{
+            find: 'assets',
+            replacement: path.resolve(__dirname,'./src/assets')
         }]
     },
     server: {

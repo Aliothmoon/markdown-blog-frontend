@@ -55,7 +55,7 @@
               <div class="cardA-inner">
 
                 <div class="w-0.5" style="padding: 30px;transform: translateY(50%) ;position: absolute;bottom: 50%">
-                  <n-avatar src="imgs/ff.jpg" size="1" style="max-width: 160px"></n-avatar>
+                  <n-avatar src="imgs/ff.jpg" :size="1" style="max-width: 160px"></n-avatar>
                 </div>
 
               </div>
