@@ -4,11 +4,12 @@ import {NBackTop, NIcon} from "naive-ui";
 
 export default defineComponent({
   name: "AnchorToolBar",
-  components: {NIcon},
+  components: {
+    NIcon
+  },
   setup: () => {
     const scrollElement = document.documentElement
     const scrollUp = () => {
-      console.log('up')
       const timer = setTimeout(() => {
         scrollElement.scrollTop = 5
       }, 1200)

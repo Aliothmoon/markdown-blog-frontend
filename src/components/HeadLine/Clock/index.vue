@@ -1,8 +1,8 @@
 <script lang="ts">
 import {defineComponent, reactive, ref} from "vue";
 import * as dayjs from 'dayjs'
-import {dateMap, dayMap, monthMap} from "@/components/Clock/data.ts";
-import type {ClockStatus} from "@/components/Clock/type"
+import {dateMap, dayMap, monthMap} from "@/components/HeadLine/Clock/data.ts";
+import type {ClockStatus} from "@/components/HeadLine/Clock/type"
 
 function getTimeStateStyle() {
   const hours = new Date().getHours();

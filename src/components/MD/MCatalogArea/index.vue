@@ -19,10 +19,13 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="catalog-box mt-4" >
+  <div class="catalog-box mt-4">
     <p>目录</p>
     <n-scrollbar style="max-height: 45vh">
-      <MdCatalog :editorId="editorId" :scrollElement="scrollElement"/>
+      <MdCatalog :editorId="editorId"
+                 :scrollElement="scrollElement"
+                 :scrollElementOffsetTop="70"
+      />
     </n-scrollbar>
   </div>
 </template>

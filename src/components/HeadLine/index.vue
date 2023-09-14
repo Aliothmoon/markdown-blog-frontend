@@ -6,7 +6,7 @@ import CButton from "@/components/Button/CButton/index.vue";
 import SButton from "@/components/Button/SButton/index.vue";
 import HSignal from "@/components/HeadLine/HeadSignature/index.vue";
 import {NCard, NModal} from "naive-ui";
-import SearchModal from "@/components/SearchModal/index.vue";
+import SearchModal from "@/components/HeadLine/SearchModal/index.vue";
 
 export default defineComponent({
   name: "HeadLine",

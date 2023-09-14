@@ -6,11 +6,15 @@ import {useStore} from "@/store";
 
 export const routes: Array<RouteRecordRaw> = [
     {
-        path: '/',
+        path: "/",
+        component: () => import('@/views/Home/index.vue')
+    },
+    {
+        path: '/archives',
         component: () => import('@/views/Main/index.vue'),
         children: [
             {
-                path: "/",
+                path: "",
                 component: InfoItemList,
                 beforeEnter: () => {
                     const store = useStore();
@@ -18,12 +22,14 @@ export const routes: Array<RouteRecordRaw> = [
                 }
             },
             {
-                path: '/a',
+                path: ':aid',
                 component: MPreview,
-                beforeEnter: () => {
+                beforeEnter: (to, form) => {
                     const store = useStore();
                     store.RightSideDirectory = true
-                }
+                    store.Aid = <string>to.params.aid
+                },
+                props: true
 
             }
         ]

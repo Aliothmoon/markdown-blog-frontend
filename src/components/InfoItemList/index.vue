@@ -25,7 +25,8 @@ export default defineComponent({
     <div class="mb-2">
       <ContentHeader></ContentHeader>
     </div>
-    <div class="flex justify-center" v-for="i in 12" @click="$router.push('/a')">
+    <div class="flex justify-center" v-for="i in 12"
+         @click="$router.push(`/archives/E${Math.round(Math.random()*100)}`)">
 
       <InfoItem :introduction="text"
                 :image="'http://localhost:5173/image'"

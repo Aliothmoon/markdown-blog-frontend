@@ -83,7 +83,8 @@ export default defineComponent({
 }
 
 .cr-font {
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
+  color: black;
   //filter: invert(10%)
 }
 

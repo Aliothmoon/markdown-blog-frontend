@@ -1,12 +1,12 @@
 <script lang="ts">
 import {defineComponent} from "vue";
-import RAsideClock from "@/components/Clock/index.vue";
+import RAsideClock from "@/components/HeadLine/Clock/index.vue";
 import RDescribes from "@/components/RightAside/Describes/index.vue";
 import RTags from "@/components/RightAside/RTags/index.vue";
-import RCategory from "@/components/Category/index.vue";
+import RCategory from "@/components/RightAside/Category/index.vue";
 import {NScrollbar} from "naive-ui";
 import MCatalogArea from "@/components/MD/MCatalogArea/index.vue";
-import AnchorToolBar from "@/components/AnchorToolBar/index.vue";
+import AnchorToolBar from "@/components/RightAside/AnchorToolBar/index.vue";
 import {useStore} from "@/store";
 
 export default defineComponent({
@@ -43,7 +43,7 @@ export default defineComponent({
       <div style="width: 280px;margin-top: 30px" v-if="!store.RightSideDirectory">
         <RTags></RTags>
       </div>
-      <MCatalogArea :editor-id="'preview-only'" v-if="store.RightSideDirectory"></MCatalogArea>
+      <MCatalogArea :editor-id="store.Aid" v-if="store.RightSideDirectory"></MCatalogArea>
       <AnchorToolBar></AnchorToolBar>
     </div>
 

@@ -6,10 +6,12 @@
 
 :root {
     /*background-color: #CFD3DC;*/
+
 }
 
 html {
     /* 浏览器滚动条 */
+    height: 100%;
 }
 
 html > ::-webkit-scrollbar {

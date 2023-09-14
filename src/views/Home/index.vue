@@ -92,11 +92,15 @@ const mobileJump = () => {
 
 }
 const enter = () => {
-  router.push("/home");
+  router.push("/archives");
 }
 </script>
 
 <style scoped>
+.panel {
+  font-family: HarmonyOS_Sans_Medium;
+}
+
 
 .cardA {
   width: 220px;
@@ -300,9 +304,6 @@ const enter = () => {
   align-items: center;
 }
 
-.panel {
-  font-family: HarmonyOS_Sans_Medium, serif;
-}
 
 .home-son {
   width: 70%;

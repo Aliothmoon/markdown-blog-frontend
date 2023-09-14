@@ -9,10 +9,10 @@ import RDescribes from "@/components/RightAside/Describes/index.vue";
 import ContentHeader from "@/components/InfoItemList/ContentHeader/index.vue";
 import RTag from "@/components/RightAside/RTag/index.vue";
 import RTags from "@/components/RightAside/RTags/index.vue";
-import RCategory from "@/components/Category/index.vue";
+import RCategory from "@/components/RightAside/Category/index.vue";
 import HeadLine from "@/components/HeadLine/index.vue";
 import MPreview from "@/components/MD/MPreview/index.vue";
-import AnchorToolBar from "@/components/AnchorToolBar/index.vue";
+import AnchorToolBar from "@/components/RightAside/AnchorToolBar/index.vue";
 </script>
 
 <template>

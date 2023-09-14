@@ -1,7 +1,7 @@
 <script lang="ts">
 import {defineComponent, ref, toRefs} from 'vue'
 import {NModal, NScrollbar} from "naive-ui";
-import {data} from '@/components/SearchModal/mock.ts'
+import {data} from '@/components/HeadLine/SearchModal/mock.ts'
 
 export default defineComponent({
   name: "SearchModal",
