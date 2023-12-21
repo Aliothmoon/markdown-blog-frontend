@@ -14,7 +14,6 @@
 import {onMounted, ref} from "vue";
 import service from "@/utils/request/index.ts";
 import {NONE, PENDING, FAIL, SUCCESS} from '@/views/Manage/status.ts'
-
 const loading = ref(false);
 const color = ref('bg-secondary');
 const text = ref('None');

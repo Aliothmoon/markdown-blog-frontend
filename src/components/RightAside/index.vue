@@ -1,6 +1,6 @@
 <script lang="ts">
 import {defineComponent} from "vue";
-import RAsideClock from "@/components/HeadLine/Clock/index.vue";
+import RAsideClock from "@/components/RightAside/Clock/index.vue";
 import RDescribes from "@/components/RightAside/Describes/index.vue";
 import RTags from "@/components/RightAside/RTags/index.vue";
 import RCategory from "@/components/RightAside/Category/index.vue";

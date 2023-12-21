@@ -1,8 +1,8 @@
 <script lang="ts">
 import {defineComponent, reactive, ref} from "vue";
 import * as dayjs from 'dayjs'
-import {dateMap, dayMap, monthMap} from "@/components/HeadLine/Clock/data.ts";
-import type {ClockStatus} from "@/components/HeadLine/Clock/type"
+import {dateMap, dayMap, monthMap} from "@/components/RightAside/Clock/data.ts";
+import type {ClockStatus} from "@/components/RightAside/Clock/type"
 
 function getTimeStateStyle() {
   const hours = new Date().getHours();
@@ -71,8 +71,8 @@ export default defineComponent({
 </template>
 
 <style scoped lang="less">
-@card-w: 200px;
-@card-h: 100px;
+@card-w: 240px;
+@card-h: 120px;
 
 .card {
   width: @card-w;

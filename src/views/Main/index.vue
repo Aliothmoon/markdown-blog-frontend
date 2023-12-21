@@ -8,10 +8,6 @@
         <LeftAside></LeftAside>
       </div>
       <div class="content">
-
-        <!--      <component :is="components[current]"></component>-->
-        <!--            <InfoItemList></InfoItemList>-->
-        <!--        <router-view></router-view>-->
         <router-view v-slot="{Component}">
           <transition enter-active-class='animated animate__fadeIn' leave-active-class='animated animate__fadeOut'>
             <component :is="Component"></component>
@@ -35,7 +31,7 @@
 import {defineComponent, ref} from "vue";
 import LeftAside from "@/components/LeftAside/index.vue";
 import InfoItem from "@/components/InfoItemList/InfoItem/index.vue";
-import RAsideClock from "@/components/HeadLine/Clock/index.vue";
+import RAsideClock from "@/components/RightAside/Clock/index.vue";
 import RightAside from "@/components/RightAside/index.vue";
 import ContentHeader from "@/components/InfoItemList/ContentHeader/index.vue";
 import RTags from "@/components/RightAside/RTags/index.vue";
@@ -90,6 +86,8 @@ export default defineComponent({
   justify-content: center;
   width: 100%;
   background-color: rgb(250, 247, 245);
+   //background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%) no-repeat;
+  //background-size: cover;
   //background-image: url("public/imgs/star-wars.jpeg");
 }
 

@@ -20,7 +20,7 @@ export default defineComponent({
 
 <template>
 
-  <div class="flex justify-center mt-2 mb-4  ">
+  <div class="flex justify-center mt-2 mb-4">
     <n-pagination v-model:page="current" :page-count="pageNumber" simple size="medium"/>
   </div>
 </template>
